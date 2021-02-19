@@ -1,0 +1,202 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; 
+}
+html,body { 
+    height: 100%; 
+    margin: 0px; 
+    padding: 0px;
+}
+.top-nav{
+    width: 100%;
+    height: 10vh;
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFAE0;
+}
+.links{
+    padding: 0 10px;
+    color: #2F363D;
+}
+.content{
+    height: 100%;
+    display: flex;
+}
+.side-nav{
+    width: 20vw;
+    height: 90%;
+    position: fixed;
+    z-index: 1;
+    background-color: #FEFAE0;
+}
+.side-nav-container{
+    margin: auto;
+    width: 90%;
+}
+.side-nav-list{
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 0;
+}
+.side-nav-items:nth-child(1){
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.side-nav-items{
+    margin-bottom: 2vh;
+    font-weight: bolder;
+}
+.logo-n-name{
+    font-size: 1.6em;
+    text-align: center;
+    border-bottom: 1px solid red;
+    padding: 1em;
+}
+.logo-n-name > .fas{
+    font-size: 4em;
+    margin-bottom: 0.2em;
+}
+.side-nav-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    height: 10vh;
+    background-color: chocolate;
+    font-size: 1.5em;
+}
+.soc-links, .team-name{
+    color: #FEFAE0;
+}
+.menu{
+    width: 59.5vw;
+    height: 1000px;
+    margin-left: 20vw;
+    position: relative;
+    background-color:#fff;
+}
+.orders-nav{
+    width: 20vw;
+    height: 90%;
+    position: fixed;
+    right: 0;
+    background-color:#FEFAE0;
+}
+.orders-nav-heading{
+    width: 90%;
+    margin: auto;
+    font-size: 1.5em;
+    margin-top: 5vh;
+    text-align: right;
+    border-bottom: 1px solid red;
+    padding: 0.5em 0;
+}
+.orders-list{
+    width: 95%;
+    margin: auto;
+    height: inherit;
+    overflow-y: scroll;
+}
+.orders-result{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: inherit;
+    height: 15vh;
+}
+.orders-compute{
+    width: 90%;
+    margin: auto;
+}
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.btn-div{
+    width: inherit;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+.checkout-btn{
+    width: 90%;
+    height: 8vh;
+    background-color: #283618;
+    color: #FEFAE0;
+    font-family: 'Paytone One', sans-serif;
+    letter-spacing: 5px;
+}
+.logo-name, .logo-n-name, .side-nav-items:nth-child(1), .cust-name, .orders-nav-heading, .orders-compute{
+    font-family: 'Paytone One', sans-serif;
+    color: #2F363D;
+}
+.nav-list, .side-nav-items, .team-name{
+    font-family: 'Cutive Mono', monospace;
+    color: #2F363D;
+}
+
+
+.container{
+    width: 100%;
+    background-color: aqua;
+}
+.section-header{
+    margin: 0;
+}
+.shop-items{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.shop-item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+}
+.shop-item-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    font-size: 0.9em;
+}
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-price {
+    width: 40px;
+    font-size: 1.1em;
+    color: #333;
+}
+.cart-item-title, .cart-quantity-input{
+    width: 50px;
+}
+.cart-quantity {
+    display: flex;
+    justify-content: space-between;
+}
+.btn-danger{
+    width: 60px;
+    font-size: 0.7em;
+}

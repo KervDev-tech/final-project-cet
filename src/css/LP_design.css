@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+header{
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+}
+.heading{
+    position: static;
+    width: 100%;
+    height: auto;
+}
+.bg-head{
+    width: 50%;
+}
+.about{
+    width: 50%;
+    background:  rgba(255,255,255,0.2);
+    padding: 3em;
+    border-radius: 3em;
+    backdrop-filter: blue(40px);
+    right: 0;
+}
+.products{
+    width: 100%;
+}
+.offers{
+    width: 100px;
+    height: 200px;
+    background-color: aquamarine;
+}

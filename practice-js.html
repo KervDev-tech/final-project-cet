@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="minus" onclick="minus()">
+        -
+    </button>
+    <span id="output">
+       0 
+    </span>
+    <button id="add" onclick="add()">
+        +
+    </button>
+    <button id="result" onclick="disp()">
+        get total
+    </button>
+    <button id="a" onclick="selectA()">
+        A
+    </button>
+    <button id="display" onclick="dispA()">
+        display A
+    </button>
+    <span id="displayA">
+
+    </span>
+    <button id="b" onclick="selectB()">
+        B
+    </button>
+    <button id="display" onclick="dispB()">
+        display B
+    </button>
+    <span id="displayB">
+
+    </span>
+    <span id="total-val">
+    </span>
+
+    <br>
+
+    <input type="number" name="num" id="num">
+    <button onclick="insert('num'), show()">add to array</button>
+    <span id="result-total">
+
+    </span>
+
+    <script>
+        var a = 0;
+        var b = 0;
+        var num = 40;
+        var total = 0;
+        var total_ouput = 0;
+        function minus(){
+            total--;
+            total_ouput = total * num;
+            document.getElementById('output').innerHTML = total;
+            document.getElementById('total-val').value = total_ouput;
+            if(total == 0){
+                document.getElementById("minus").disabled = true;
+            }
+
+        }
+        function add(){
+            total++;
+            total_ouput = total * num;
+            document.getElementById('output').innerHTML = total;
+            document.getElementById("minus").disabled = false;
+            document.getElementById('total-val').value = total_ouput;
+            
+        }
+        function disp(){
+            var text = document.getElementById('total-val');
+            text.innerHTML = total_ouput;
+        }
+        function selectA(){
+            a = 50;
+        }
+        function selectB(){
+            b = 50;
+        }
+        function dispA(){
+            document.getElementById('displayA').innerHTML = a;
+        }
+        function dispB(){
+            document.getElementById('displayB').innerHTML = b;
+        }
+        var Tarray = [];
+
+
+    </script> -->
+
+    <input type="text" name="num" id="num">
+    <button onclick="insertTo()">add to array</button>
+    <button onclick="displayArray()">display</button>
+    <span id="result">
+
+    </span>
+
+    <!-- <div class="items">
+        <div class="flex-child">
+            <button id="a" onclick="minus()">
+                -
+            </button>
+        </div>
+        <div class="flex-child">
+            <button id="b" onclick="plus()">
+                +
+            </button>
+        </div>
+        <div class="flex-child">
+            <button id="c" onclick="selC()">
+                output
+            </button>
+        </div>
+    </div>
+    <div id="output">
+
+    </div>
+    <div id="total-val">
+
+    </div> -->
+    
+
+    <script>
+        /* var num = 50;
+
+        var myarray = [];
+        var total = 0;
+
+        function minus(){
+            myarray.pop()
+            total_ouput = total * num;
+            document.getElementById('output').innerHTML = total;
+            document.getElementById('total-val').value = total_ouput;
+            if(total == 0){
+                document.getElementById("minus").disabled = true;
+            }
+        }
+        function plus(){
+            total++;
+            total_ouput = total * num;
+            document.getElementById('output').innerHTML = total;
+            document.getElementById("minus").disabled = false;
+            document.getElementById('total-val').value = total_ouput;
+        }
+        function selC(){
+            total = valC;
+            document.getElementById("output").innerHTML += total;
+        } */
+
+
+        var myarray = [];
+        var total = 0;
+
+
+        function insertTo(){
+            var num = document.getElementById('num').value;
+            var z = num;                                
+
+            myarray.push(z);  
+            document.getElementById('result').innerHTML += num;
+            console.log(myarray);  
+        }
+        function displayArray(){
+            for (i=0;i<myarray.length;i++)
+            {
+                total += parseFloat(myarray[i]);
+            }
+            document.getElementById('result').innerHTML = total;
+        }
+    </script>
+</body>
+</html>
