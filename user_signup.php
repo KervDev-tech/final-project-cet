@@ -10,6 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Paytone+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php
+        if (isset($_GET['s'])) {
+            if($_GET['s'] == "failed"){
+                echo"<script>alert('Signup failed')</script>";
+            }
+            else if($_GET['s'] == "EmailAlreadyTaken"){
+                echo"<script>alert('Signup failed, email alraedy taken')</script>";
+            }
+            else{
+                echo"<script>alert('Signup Successful')</script>";
+            }
+        } 
+    ?>
     <div class="container">
         <div class="image-container">
             <img class="bg-img" src="src/img/bg_img_2.jpg" alt="">
@@ -22,7 +35,7 @@
                 </div>
                 <iv class="nav-list">
                     <div class="goto-login">
-                        <p>Already have an account?<a href="#" class="nav-item">Sign in</a></p>
+                        <p>Already have an account?<a href="user_login.php" class="nav-item">Login</a></p>
                     </div>
                 </iv>
             </div>
@@ -30,7 +43,7 @@
                 <div class="signup-head">
                     <h1>Sign up.</h1>
                 </div>
-                <form action="signup.php" method="post">
+                <form action="user_signup_process.php" method="post">
                     <div class="input-fields">
                         <label for="userName" class="input-label">Enter your Name</label>
                         <input class="user-input" type="text" name="userName" id="userName">
@@ -48,7 +61,7 @@
                         <input class="user-input" type="password" name="ReuserPass" id="ReuserPass" onchange="rePass()">
                     </div>
                     <div class="btn">
-                        <input class="signup-btn" type="button" value="Sign up">
+                        <input class="signup-btn" type="submit" value="Sign up" id="btn-signup" onfocus="rePass()">
                     </div>
                 </form>
                 <p class="team-name">
@@ -78,12 +91,15 @@
             var r = "";
             if (outcome == -1) {
                 r = 'Password didnt match!';
+                document.getElementById("btn-signup").disabled = true;
             } 
             else if (outcome == 0) {
                 r = 'Password match!';
+                document.getElementById("btn-signup").disabled = false;
             } 
             else {
                 r = 'Password didnt match!';
+                document.getElementById("btn-signup").disabled = true;
             }
             retypeP.innerHTML = r;
         }

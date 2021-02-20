@@ -90,7 +90,7 @@
             </form>
             <div class="food-cards">
                 <div class="card">
-                    <div class="img-container">
+                    <div class="food-img">
                         Food Image
                     </div>
                     <div class="food-name">

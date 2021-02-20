@@ -1,6 +1,6 @@
 <?php
 
-    $data =  $_POST['mydata'];
+    /* $data =  $_POST['mydata'];
     $orders = $_POST['orders'];
     echo "the data: " . $data;
     
@@ -10,7 +10,14 @@
     {
     echo $orders[$a];
     echo '<br>';
-    }
+    } */
+
+    $username = $_POST['amount'];
+    $useremail = $_POST['orders'];
+
+
+    echo $username;
+    echo $useremail;
 
 
 ?>

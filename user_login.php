@@ -13,6 +13,16 @@
 </head>
 
 <body>
+        <?php
+            if (isset($_GET['s'])) {
+                if($_GET['s'] == "failed"){
+                    echo"<script>alert('Login failed')</script>";
+                }
+                else{
+                    echo"<script>alert('Login Succ')</script>";
+                }
+            } 
+        ?>
     <div class="container">
         <div class="login-container">
             <div class="nav-login">
@@ -29,14 +39,14 @@
                 <div class="login-head">
                     <h1>Log in.</h1>
                 </div>
-                <form action="#" method="post">
+                <form action="user_login_process.php" method="post">
                     <div class="input-fields">
                         <label for="userEmail" class="input-label">Email: <p class="validate" id="emailE"></p></label>
-                        <input class="user-input" type="email" name="userEmail" id="userEmail" onchange="ValidateEmail()">
+                        <input type="email" name="userEmail" id="userEmail" class="user-input" onchange="ValidateEmail()">
                     </div>
                     <div class="input-fields">
                         <label for="userPass" class="input-label">Password</label>
-                        <input class="user-input" type="password" name="userPass" id="userPass">
+                        <input type="password" name="userPass" id="userPass" class="user-input">
                     </div>
                     <div class="forgot-pass">
                         <a href="#" class="forgot">
@@ -44,11 +54,11 @@
                         </a>
                     </div>
                     <div class="btn">
-                        <input class="login-btn" type="button" value="Login">
+                        <input type="submit" name="login" value="Login" class="login-btn">
                     </div>
                     <div class="create-acc">
                         Doesnt have an Account?
-                        <a href="#" class="goto-create">
+                        <a href="user_signup.php" class="goto-create">
                             Sign up!
                         </a>
                     </div>

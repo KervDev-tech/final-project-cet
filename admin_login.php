@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/88ac38dcb9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<?php
+        <?php
             if (isset($_GET['s'])) {
                 if($_GET['s'] == "failed"){
                     echo"<script>alert('Login failed')</script>";
