@@ -74,9 +74,9 @@
         </div>
         <div class="image-container">
             <img class="bg-img"src="src/img/bg-img-1.jpg" alt="">
-            <p class="team-name">
+            <a href="admin_login.php" class="team-name">
                 Kerv | Dom
-            </p>
+            </a>
         </div>
     </div>
     <script>

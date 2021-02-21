@@ -31,6 +31,7 @@
                        }
                     ?>
                 </span>
+                <a href="admin_cms_dashboard.php" class="links">Goto Live Orders</a>
                 <a href="admin_cms_dashboard.php" class="links">Home</a>
                 <a href="logout_admin.php" class="links">Sign out</a>
             </div>

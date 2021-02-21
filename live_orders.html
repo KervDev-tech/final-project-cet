@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Live Update </title>
+    <link rel="stylesheet" href="src/css/scrollbar-design.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Paytone+One&display=swap" rel="stylesheet">
+    <script defer>
+        function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+        }
+        function loadFile() 
+        {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("order-list").innerHTML = 	this.responseText;
+                }
+            };
+            xhttp.open("POST", "get_order_process.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send();
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: linear-gradient(to right, #283618, #bc6c25);
+        }
+        .nav{
+            width: 90%;
+            height: 40px;
+        }
+        .nav-links{
+            background-color: #FEFAE0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .orders-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bolder;
+            color: #FEFAE0;
+            text-shadow: 1px 1px 3px #2F363D;
+        }
+        .container{
+            width: 90vw;
+            height: 80%;
+            overflow-y: scroll;
+        }
+        .table-heading{
+            width: 90vw;
+        }
+        .table-row{
+            display: flex;
+            justify-content: space-between;
+            background-color: brown;
+            margin-bottom: 10px;
+            color: #FEFAE0;
+            text-shadow: 1px 1px 3px #2F363D;
+            background: rgb(255,255,255, 0.2);
+            z-index: 1;
+            backdrop-filter: blur(40px);
+            border: solid 2px transparent;
+            background-clip: padding-box;
+            box-shadow: 2px 2px 5px rgba(46, 54, 68, 0.3);
+        }
+        .column-heading{
+            height: 50px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .column-heading, .column-name{
+            width: 150px;
+            text-align: center;
+            margin: 10px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .column-name:nth-child(8){
+            background-color: #2F363D;
+            color: #FEFAE0;
+            border-radius: 10px;
+        }
+        .column-heading:nth-child(1), .column-name:nth-child(1),
+        .column-heading:nth-child(3), .column-name:nth-child(3){
+            width: 100px;
+        }
+        .column-heading:nth-child(4), .column-name:nth-child(4){
+            width: 400px;
+        }
+    </style>
+</head>
+<body onload="AutoRefresh(5000); loadFile();">
+    <div class="nav">
+        <div class="links">
+            <a href="" class="nav-links">Go Back to Homepage</a>
+        </div>
+    </div>
+    <div class="orders-heading">
+        <span>Live Update of Orders</span>
+    </div>
+    <div class="table-heading">
+        <di class="table-row">
+            <div class="column-heading">
+                Order ID
+            </div>
+            <div class="column-heading">
+                Customer Name
+            </div>
+            <div class="column-heading">
+                Table Number
+            </div>
+            <div class="column-heading">
+                Orders
+            </div>
+            <div class="column-heading">
+                Amount
+            </div>
+            <div class="column-heading">
+                Order Date
+            </div>
+            <div class="column-heading">
+                Status
+            </div>
+            <div class="column-heading">
+                Action
+            </div>
+        </di>
+    </div>
+    <div class="container" id="order-list">
+        <div class="table-row">
+            <div class="column-name">
+                Semenoy
+            </div>
+            <div class="column-name">
+                Semenoy
+            </div>
+            <div class="column-name">
+                Semenoy
+            </div>
+            <div class="column-name">
+                Semenoy
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+                height: 100px;
+            </div>
+            <div class="column-name">
+                Semenoy
+            </div>
+            <div class="column-name">
+                Semenoy
+            </div>
+            <div class="column-name">
+                Semenoy
+            </div>
+        </div>
+    </div>
+</body>
+</html>

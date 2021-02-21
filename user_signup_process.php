@@ -24,7 +24,7 @@
             $_SESSION['userName'] = $username;
             mysqli_close($conn); // Close connection
             // header("location:admin_cms_dashboard.php?s=$adminname"); // redirects to all records page
-            header("location:ordering_menu.html");
+            header("location:ordering_menu.php");
             exit;
         }
         else{

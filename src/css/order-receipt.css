@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2F363D;
+}
+.container{
+    width: 800px;
+}
+fieldset{
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 2px 2px 5px rgba(46, 54, 68, 0.3);
+    font-size: 1.2rem;
+}
+legend{
+    text-align: center;
+}
+.logo-name{
+    margin: 0 10px;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.section-header{
+    font-size: 1.6em;
+    font-weight: bolder;
+    text-align: center;
+}
+.heading{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.action-choice{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.logout-link{
+    border: 2px solid #283618;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 2em;
+    color: #283618;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 5px;
+}
+.logout-link:hover{
+    background-color: #283618;
+    color: #FEFAE0;
+}
+.re-order-link{
+    background-color:  #BC6625;
+    padding: 10px;
+    border: 2px solid #dda15e;
+    border-radius: 10px;
+    color: #FEFAE0;
+    text-shadow: 1px 1px 3px #2F363D;
+    font-size: 2em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 5px;
+}
+.re-order-link:hover{
+    background-color: #FEFAE0;
+    color: #BC6625;
+}
+.bottom-nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#BC6625;
+    border-radius: 0px 0px 10px 10px;
+}
+.soc-links, .team-name{
+    margin: 5px;
+    font-size: 1.7em;
+    color: #FEFAE0;
+    text-shadow: 1px 1px 3px #2F363D;
+}
+.order-message, .logo-name, .re-order-link, .logout-link{
+font-family: 'Paytone One', sans-serif;
+}
+.heading, .soc-links, .team-name, fieldset{
+    font-family: 'Cutive Mono', monospace;
+}

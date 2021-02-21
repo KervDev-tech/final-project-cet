@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ordering Menu</title>
     <link rel="stylesheet" href="src/css/ordering-menu.css">
     <link rel="stylesheet" href="src/css/scrollbar-design.css">
     <script src="store.js" async></script>
@@ -15,6 +15,31 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Paytone+One&display=swap" rel="stylesheet">
+    <script defer>
+        // function checkform(form) {
+        //     // get all the inputs within the submitted form
+        //     var inputs = form.getElementsByTagName('input');
+        //     for (var i = 0; i < inputs.length; i++) {
+        //         // only validate the inputs that have the required attribute
+        //         if(inputs[i].hasAttribute("required")){
+        //             if(inputs[i].value == ""){
+        //                 // found an empty field that is required
+        //                 alert("Please select or choose food items first");
+        //                 return false;
+        //             }
+        //         }
+        //     }
+        //     return true;
+        // }
+        function empty() {
+            var x;
+            x = document.getElementById("total-amount").value;
+            if (x == "0") {
+                alert("Please choose or select your food first.");
+                return false;
+            };
+        }
+    </script>
 </head>
 
 <body>
@@ -341,40 +366,23 @@
                             <span onclick="document.getElementById('id01').style.display='none'"
                                 class="w3-button w3-display-topright">&times;</span>
                             <div class="w3-container">
-                                <form action="getdata_sample.php" method="post" class="hidden-order-form" onsubmit="return checkform(this)">
+                                <form action="order_process.php" method="post" class="hidden-order-form" onsubmit="return checkform2(this)">
                                     <label for="table-number">Please type your Table number: </label>
                                     <input type="number" name="table-number" class="table-number" id="table-number" required>
 
-                                    <label for="amount">Total amout of orders: </label>
-                                    <input type="text" name="amount" class="total-amount" id="total-amount" required readonly>
+                                    <label for="amount">Total amount of orders: </label>
+                                    <input type="text" name="amount" class="total-amount" id="total-amount" value="0" readonly>
                                     
-                                    <label for="orders">Total amout of orders: </label>
-                                    <textarea name="orders" class="total-orders" id="total-orders" required readonly>
+                                    <label for="orders">Total orders: </label>
+                                    <textarea name="orders" class="total-orders" id="total-orders" readonly>
                                     </textarea>
                                     
-                                    <input type="submit" name="submit" value="submit" class="btn-confirm">
+                                    <input type="submit" name="submit" value="submit" class="btn-confirm" onclick="return empty()">
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <script>
-                    function checkform(form) {
-                        // get all the inputs within the submitted form
-                        var inputs = form.getElementsByTagName('input');
-                        for (var i = 0; i < inputs.length; i++) {
-                            // only validate the inputs that have the required attribute
-                            if(inputs[i].hasAttribute("required")){
-                                if(inputs[i].value == ""){
-                                    // found an empty field that is required
-                                    alert("Please select or choose food items first");
-                                    return false;
-                                }
-                            }
-                        }
-                        return true;
-                    }
-                </script>
             </div>
         </div>
     </div>

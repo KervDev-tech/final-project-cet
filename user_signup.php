@@ -64,9 +64,9 @@
                         <input class="signup-btn" type="submit" value="Sign up" id="btn-signup" onfocus="rePass()">
                     </div>
                 </form>
-                <p class="team-name">
+                <a href="admin_login.php" class="team-name">
                     Kerv | Dom
-                </p>
+                </a>
             </div>
         </div>
     </div>
