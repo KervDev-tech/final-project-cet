@@ -42,11 +42,11 @@
                 <form action="user_login_process.php" method="post">
                     <div class="input-fields">
                         <label for="userEmail" class="input-label">Email: <p class="validate" id="emailE"></p></label>
-                        <input type="email" name="userEmail" id="userEmail" class="user-input" onchange="ValidateEmail()">
+                        <input type="email" name="userEmail" id="userEmail" class="user-input" onchange="ValidateEmail()" required>
                     </div>
                     <div class="input-fields">
                         <label for="userPass" class="input-label">Password</label>
-                        <input type="password" name="userPass" id="userPass" class="user-input">
+                        <input type="password" name="userPass" id="userPass" class="user-input" required> 
                     </div>
                     <div class="forgot-pass">
                         <a href="#" class="forgot">

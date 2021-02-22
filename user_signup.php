@@ -46,19 +46,19 @@
                 <form action="user_signup_process.php" method="post">
                     <div class="input-fields">
                         <label for="userName" class="input-label">Enter your Name</label>
-                        <input class="user-input" type="text" name="userName" id="userName">
+                        <input class="user-input" type="text" name="userName" id="userName" required>
                     </div>
                     <div class="input-fields">
                         <label for="userEmail" class="input-label">Enter your Email: <p class="validate" id="emailE"></p></label>
-                        <input class="user-input" type="email" name="userEmail" id="userEmail" onchange="ValidateEmail()">
+                        <input class="user-input" type="email" name="userEmail" id="userEmail" onchange="ValidateEmail()" required>
                     </div>
                     <div class="input-fields">
                         <label for="userPass" class="input-label">Password</label>
-                        <input class="user-input" type="password" name="userPass" id="userPass">
+                        <input class="user-input" type="password" name="userPass" id="userPass" required>
                     </div>
                     <div class="input-fields">
                         <label for="ReuserPass" class="input-label">Re-enter your password: <p class="validate" id="retypeP"></p></label>
-                        <input class="user-input" type="password" name="ReuserPass" id="ReuserPass" onchange="rePass()">
+                        <input class="user-input" type="password" name="ReuserPass" id="ReuserPass" onchange="rePass()" required>
                     </div>
                     <div class="btn">
                         <input class="signup-btn" type="submit" value="Sign up" id="btn-signup" onfocus="rePass()">

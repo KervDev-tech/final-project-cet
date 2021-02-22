@@ -17,7 +17,7 @@
         <div class="nav-items">
             <div class="logo-name">
                 <i class="fas fa-utensils"></i>
-                Ordering System
+                <a href="user_login.php">Ordering System</a>
             </div>
             <div class="nav-list">
                 <span class="admin-name">
@@ -31,7 +31,7 @@
                        }
                     ?>
                 </span>
-                <a href="admin_cms_dashboard.php" class="links">Goto Live Orders</a>
+                <a href="live_orders.html" class="links">Goto Live Orders</a>
                 <a href="admin_cms_dashboard.php" class="links">Home</a>
                 <a href="logout_admin.php" class="links">Sign out</a>
             </div>
@@ -66,14 +66,14 @@
                     Food Items
                 </div>
             </a>
-            <div class="card">
+            <a href="display_orders.php" class="card">
                 <div class="img-container">
                     <i class="fas fa-clipboard-list"></i>
                 </div>
                 <div class="card-name">
                     Order History
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </body>

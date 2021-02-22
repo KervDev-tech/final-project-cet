@@ -6,6 +6,16 @@
     <title>Admin Login</title>
     <link rel="stylesheet" href="src/css/admin-login.css">
     <script src="https://kit.fontawesome.com/88ac38dcb9.js" crossorigin="anonymous"></script>
+    <script defer>
+        function empty() {
+            var x;
+            x = document.getElementById("").value;
+            if (x == "0") {
+                alert("Please .");
+                return false;
+            };
+        }
+    </script>
 </head>
 <body>
         <?php
@@ -28,9 +38,9 @@
             </div>
             <form class="login-form" action="admin_login_process.php" method="post">
                 <label for="adminName" class="input-label">Name</label>
-                <input type="text" name="adminName" id="adminName" class="admin-input">
+                <input type="text" name="adminName" id="adminName" class="admin-input" required>
                 <label for="adminPass" class="input-label">Password</label>
-                <input type="password" name="adminPass" id="adminPass" class="admin-input">
+                <input type="password" name="adminPass" id="adminPass" class="admin-input" required>
                 <input type="submit" class="admin-btn" value="LOGIN">
             </form>
         </div>
